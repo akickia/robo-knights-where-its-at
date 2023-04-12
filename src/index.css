@@ -1,22 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Fira Sans';
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --background-color: #231F42;
+  --lt-grey-font: #D0D0D0;
+  --pink-font-shadow-border: #F56B9A;
+  --turquoise-font-button: #37AEAB;
+  --white-font: #FFFFFF;
 
-  font-synthesis: none;
+  /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; */
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
@@ -32,8 +36,13 @@ body {
 }
 
 h1 {
+  font-family: 'Sansita';
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h2 {
+  font-family: 'Sansita';
 }
 
 button {
