@@ -24,7 +24,7 @@ body {
   display: flex;
   place-items: center;
   width: 23.5rem;
-  min-height: 42rem;
+  height: 42rem;
   background-color: var(--background-color);
 }
 
