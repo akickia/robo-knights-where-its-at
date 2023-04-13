@@ -3,20 +3,12 @@
 
 :root {
   font-family: 'Fira Sans';
-  line-height: 1.5;
-  font-weight: 400;
 
   --background-color: #231F42;
   --lt-grey-font: #D0D0D0;
   --pink-font-shadow-border: #F56B9A;
   --turquoise-font-button: #37AEAB;
   --white-font: #FFFFFF;
-
-  /* font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%; */
 }
 
 a {
@@ -28,37 +20,43 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 23.5rem;
+  min-height: 42rem;
+  background-color: var(--background-color);
+}
+
+h1, h2 {
+  font-family: 'Sansita';
+  font-style: italic;
+  color: var(--pink-font-shadow-border);
 }
 
 h1 {
-  font-family: 'Sansita';
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.2rem;
 }
 
 h2 {
-  font-family: 'Sansita';
+  font-size: 2rem;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  position: absolute;
+  width: 19.4rem;
+  height: 3.75rem;
+  background: var(--turquoise-font-button);
+  color: var(--white-font);
+  border-radius: 3px;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+  background-color: var(--white-font);
+  color: var(--turquoise-font-button);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
