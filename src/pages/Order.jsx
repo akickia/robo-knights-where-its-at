@@ -1,9 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import NumberOfTickets from "../Components/NumberOfTickets";
 import PrimaryButton from "../Components/PrimaryButton";
 
+
 function Order() {
+  const navigate = useNavigate()
+  function handleNavigation() {
+    navigate("/tickets")
+  }
+
+  const events = JSON.parse(localStorage.getItem("cart"))
   const [count, setCount] = useState(1)
+  
   function increaseCount() {
     setCount(prevCount => prevCount+1)
   }
@@ -12,9 +21,8 @@ function Order() {
       setCount(prevCount => prevCount-1)
     }
   }
-  const events = JSON.parse(localStorage.getItem("cart"))
  const eventElements = events.map((event, i) => {
-
+    // setCount(event.count)
     return (      
       <NumberOfTickets key={i} eventName={event.name} eventTime={event.when.date + " " + event.when.from}  decreaseCount={decreaseCount} increaseCount={increaseCount} count={event.count}/>
   )})
@@ -29,15 +37,13 @@ const reducedPrice = totalPrice.reduce((acc, current) => {
 }, 0)
   
   
-  console.log(events[0].name)
   return ( 
     <article>
       <h1>Order</h1>
       {eventElements}
       <p>Totalt värde på order</p>
       <h4>{reducedPrice} sek</h4>
-      <PrimaryButton title={"Skicka order"} action={() => {console.log("beställ")}} />
-    
+      <PrimaryButton title={"Skicka order"} action={() => {handleNavigation()}} />
     </article>
    );
 }

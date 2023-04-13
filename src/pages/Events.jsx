@@ -21,7 +21,6 @@ function Events() {
     return ( 
     <article>
       <h1>Events</h1>
-      
       <EventCardsContainer events={events} />
     </article>
    );
