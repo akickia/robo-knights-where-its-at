@@ -5,18 +5,15 @@
   font-family: 'Fira Sans';
 
   --background-color: #231F42;
+  --input-color: #38335c;
   --lt-grey-font: #D0D0D0;
   --pink-font-shadow-border: #F56B9A;
   --turquoise-font-button: #37AEAB;
   --white-font: #FFFFFF;
 }
 
-a {
-  font-weight: 500;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  border-style: none;
 }
 
 body {
@@ -24,8 +21,9 @@ body {
   display: flex;
   place-items: center;
   width: 23.5rem;
-  height: 42rem;
+  min-height: 42rem;
   background-color: var(--background-color);
+  color: var(--white-font);
 }
 
 h1, h2 {
@@ -43,7 +41,7 @@ h2 {
 }
 
 button {
-  position: absolute;
+  /* position: absolute; */
   width: 19.4rem;
   height: 3.75rem;
   background: var(--turquoise-font-button);
@@ -52,7 +50,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+input {
+  background-color: var(--input-color);
+  width: 19rem;
+  height: 2.5rem;
+}
+
+/* button:hover {
   background-color: var(--white-font);
   color: var(--turquoise-font-button);
 }
@@ -60,7 +64,7 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -70,7 +74,8 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
+/*   
   button {
     background-color: #f9f9f9;
-  }
+  } */
 }
