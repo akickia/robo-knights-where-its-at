@@ -6,12 +6,15 @@ import Events from './pages/Events'
 import Event from './pages/Event'
 import Order from './pages/Order'
 import Tickets from './pages/Tickets'
+import { createContext, useState } from 'react'
 
-
+export const CartContext = createContext()
 
 function App() {
 
+const [cart, setCart] = useState([])
   return (
+    <CartContext.Provider value={{cart, setCart}}>
     <BrowserRouter>
       <Routes>
         <Route path="/events" element={<Events />}></Route>
@@ -23,6 +26,7 @@ function App() {
         <Route path='*' element={<Navigate to='/error' />} />
       </Routes>
     </BrowserRouter>
+    </CartContext.Provider>
   )
 }
 

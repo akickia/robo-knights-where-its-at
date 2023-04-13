@@ -1,22 +1,21 @@
 import NumberOfTickets from "../Components/NumberOfTickets";
 import PrimaryButton from "../Components/PrimaryButton";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../App";
 
 function Event() {
+
+  const {cart, setCart} = useContext(CartContext)
+  
   const navigate = useNavigate()
-
-  function handleNavigation() {
-    navigate("/events")
-  }
+  
   const eventValue= JSON.parse(localStorage.getItem("event"))
-  console.log(eventValue)
-
-  const {name, price, when:{date, from, to}, where} = eventValue
+ const {name, price, when:{date, from, to}, where} = eventValue
   
   const [totalPrice, setTotalPrice] = useState(price)
   const [count, setCount] = useState(1)
-  const [cart, setCart] = useState([{
+  const [tickets, setTickets] = useState({
     name: name,
     price: price,
     when: {
@@ -24,14 +23,20 @@ function Event() {
       from: from, 
       to: to },
     where: where,
-  }])
-  console.log(totalPrice)
+    count: count,
+  })
+ 
+
+  function handleNavigation() {
+    navigate("/events")
+  }
+  
 
   useEffect(() => {
     setTotalPrice(price*count)
-    setCart(prevCart => {
+    setTickets(prevTickets => {
       return {
-        ...prevCart, count: count
+        ...prevTickets, count: count
       }
     })
   }, [count])
@@ -44,9 +49,16 @@ function Event() {
       setCount(prevCount => prevCount-1)
     }
   }
+
   function handleAddToCart() {
+      setCart([...cart, tickets])
+    }
+
+  useEffect(() => {
+    
     localStorage.setItem("cart", JSON.stringify(cart))
-  }
+    console.log("reset?")
+  }, [cart])
 
 
 

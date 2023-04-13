@@ -1,8 +1,5 @@
-import EventCard from '../Components/EventCard';
-
 import { useEffect, useState, React } from 'react'
 import EventCardsContainer from '../Components/EventCardsContainer';
-import SearchInput from '../Components/SearchInput';
 
 function Events() {
   
@@ -19,8 +16,6 @@ function Events() {
       }}
     fetchEvents()
     }, [])
-    
-    console.log(events)
 
 
     return ( 
