@@ -19,9 +19,9 @@ export default function EventCardsContainer({events}) {
 
   
   return (
-    <div>
+    <section className='event-cards-container'>
       <input type="text" onChange={handleChange}></input>
       {eventCardElement}
-    </div>
+    </section>
   )
 }

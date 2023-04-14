@@ -100,11 +100,15 @@ input {
   border-radius: 4px;
 }
 
+.event-cards-container {
+  margin-bottom: 2rem;
+}
+
 .event-card-wrapper {
   display: flex;
   align-items: center;
   position: relative;
-  margin: 1rem 0;
+  margin: 1rem 2rem 0 2rem;
 }
 
 .date-box {
