@@ -26,8 +26,10 @@ function Events() {
 
     return ( 
     <article>
-      <h1>Evenemang</h1>
-      <EventCardsContainer events={events} />
+      <header>
+        <h2>Events</h2>
+      </header>  
+        <EventCardsContainer events={events} />
       <PrimaryButton action={handleNavigation} title="Gå till varukorg" />
     </article>
    );

@@ -1,0 +1,6 @@
+.search-frame {
+    background-color: aqua;
+    width: 19rem;
+    height: 2.5rem;
+    background-image: url(../../src/images/search.png);
+}
