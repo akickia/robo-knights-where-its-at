@@ -4,9 +4,11 @@ import logo from "../images/logo.png"
 
 function Home() {
   const navigate = useNavigate()
+
+  //When time has passed we navigate to events. 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('../events')
+      navigate('/events')
     }, 5000)
     return () => clearTimeout(timer)
   }, [])

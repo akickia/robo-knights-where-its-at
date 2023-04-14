@@ -1,14 +1,17 @@
 import { useEffect, useState, React } from 'react'
 import EventCardsContainer from '../Components/EventCardsContainer';
 import PrimaryButton from '../Components/PrimaryButton';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Events() {
+
+  //Handle navigation
   const navigate = useNavigate()
-  function handleNavigation() {
-    navigate("/order")
+  function handleNavigation(route) {
+    navigate(route)
   }
   
+  //Fetch events with try and catch on first render
   const [events, setEvents] = useState([])
     useEffect(() => {
       async function fetchEvents() {
@@ -19,6 +22,7 @@ function Events() {
         }
       catch(error) {
         console.log(error)
+        handleNavigation("/error")
       }}
     fetchEvents()
     }, [])
@@ -30,7 +34,7 @@ function Events() {
         <h2>Events</h2>
       </header>  
         <EventCardsContainer events={events} />
-      <PrimaryButton action={handleNavigation} title="Gå till varukorg" />
+      <PrimaryButton action={() => handleNavigation("/order")} title="Gå till varukorg" />
     </article>
    );
 }

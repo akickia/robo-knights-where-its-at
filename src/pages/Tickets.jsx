@@ -4,9 +4,10 @@ import {nanoid} from 'nanoid'
 import { useNavigate } from 'react-router-dom'
 
 export default function Tickets() {
+  //Handle navigation
   const navigate = useNavigate()
-  function handleNavigationGoBack() {
-    navigate("/events")
+  function handleNavigation(route) {
+    navigate(route)
   }
 
   const events = JSON.parse(localStorage.getItem("cart"))
@@ -20,7 +21,7 @@ export default function Tickets() {
   })
   return (
     <article>
-      <h5 onClick={handleNavigationGoBack}>Tillbaka</h5>
+      <h5 onClick={() => handleNavigation("/events")}>Tillbaka</h5>
       <h1>Dina biljetter</h1>
       {eventElements}
       </article>
