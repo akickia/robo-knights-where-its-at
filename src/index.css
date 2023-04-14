@@ -28,9 +28,6 @@ body {
   color: var(--white-font);
 }
 
-header {
-}
-
 p {
   font-size: 0.8rem;
   color: var(--lt-grey-font);
