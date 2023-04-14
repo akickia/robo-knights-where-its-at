@@ -1,7 +1,8 @@
 import React from 'react'
+import './SearchInput.css'
 
 export default function SearchInput() {
   return (
-    <input type="text"></input>
+    <input className="search-frame" type="text"></input>
   )
 }

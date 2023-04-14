@@ -20,8 +20,10 @@ function Events() {
 
     return ( 
     <article>
-      <h1>Events</h1>
-      <EventCardsContainer events={events} />
+      <header>
+        <h2>Events</h2>
+      </header>  
+        <EventCardsContainer events={events} />
     </article>
    );
 }

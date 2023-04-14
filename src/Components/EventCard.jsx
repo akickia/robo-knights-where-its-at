@@ -13,12 +13,21 @@ export default function EventCard({eventDetails}) {
 }
   
   return (
-    <article onClick={(e) => handleLocalStorage(eventDetails)}>
-      <h5>{date}</h5>
-      <h2>{name}</h2>
-      <p>{where}</p>
-      <h4>{from}-{to}</h4>
-      <h3>{price} sek</h3>
+    <article className="event-card-details" onClick={(e) => handleLocalStorage(eventDetails)}>
+      <section className="event-card-wrapper">
+        <h5 className="date-box">{date}</h5>
+          <section className="event-box">
+            <h6>{name}</h6>
+            <p className='location-text'>{where}</p>
+            <h4>{from} - {to}</h4>
+          </section>
+        <h3 className="price-box">{price} sek</h3>
+        <hr style={{
+            color: "#fff",
+            height: "2px",
+            border: "none",
+          }}/>
+      </section>
     </article>
   )
 }
