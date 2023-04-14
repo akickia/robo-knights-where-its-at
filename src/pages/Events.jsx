@@ -1,7 +1,13 @@
 import { useEffect, useState, React } from 'react'
 import EventCardsContainer from '../Components/EventCardsContainer';
+import PrimaryButton from '../Components/PrimaryButton';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Events() {
+  const navigate = useNavigate()
+  function handleNavigation() {
+    navigate("/order")
+  }
   
   const [events, setEvents] = useState([])
     useEffect(() => {
@@ -24,6 +30,7 @@ function Events() {
         <h2>Events</h2>
       </header>  
         <EventCardsContainer events={events} />
+      <PrimaryButton action={handleNavigation} title="Gå till varukorg" />
     </article>
    );
 }
