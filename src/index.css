@@ -90,7 +90,7 @@ button:hover {
   background-color: var(--white-font);
   color: var(--turquoise-font-button);
   transition: ease-in-out 0.5s;
-}
+
 
 .center {
 display: flex;
@@ -122,32 +122,6 @@ position: relative;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* button:hover {
-  background-color: var(--white-font);
-  color: var(--turquoise-font-button);
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
-/* 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
