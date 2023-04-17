@@ -11,7 +11,8 @@ import { createContext, useState } from 'react'
 export const CartContext = createContext()
 
 function App() {
-
+//Using context to access cart in several components
+//Using routing
 const [cart, setCart] = useState([])
   return (
     <CartContext.Provider value={{cart, setCart}}>

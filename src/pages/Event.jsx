@@ -61,6 +61,8 @@ function Event() {
         setCart([...cart, tickets])
       }
     }
+
+
   
   useEffect(() => {
     setTotalPrice(price*count)

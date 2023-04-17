@@ -114,6 +114,7 @@ position: relative;
   padding: 1rem;
   color: var(--white-font);
   font-size: .75rem;
+  cursor: pointer;
 }
 
 .btn-section {

@@ -117,18 +117,21 @@ input {
 
 .decrease-ticket {
   grid-area: b;
+  cursor: pointer;
 }
 
 .ticket-count {
   grid-area: c;
   border-left: none;
   border-right: none;
-  
 }
 
 .increase-ticket {
   grid-area: d;
+  cursor: pointer;
 }
+
+
 
 
 

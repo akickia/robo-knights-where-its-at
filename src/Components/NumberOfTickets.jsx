@@ -5,10 +5,10 @@ export default function NumberOfTickets({count, eventName, eventTime, totalPrice
 
   return (
     <>
-    <section className='event-price'>
+    <section className='event-price' >
       <section className='total-price'>
         {totalPrice && <h3 >{totalPrice} sek</h3>}
-        {eventName && <div className="cart-title"><h1>{eventName}</h1> <img src={trash} /></div>}
+        {eventName && <div className="cart-title"><h1>{eventName}</h1></div>}
         {eventTime && <p>{eventTime}</p>}
         </section>
       <p className='decrease-ticket' onClick={() => decreaseCount()}>-</p>

@@ -5,11 +5,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import "../styles/events.css"
 
 function Events() {
+
+  //Handle navigation
   const navigate = useNavigate()
-  function handleNavigation() {
-    navigate("/order")
+  function handleNavigation(route) {
+    navigate(route)
   }
   
+  //Fetch events with try and catch on first render
   const [events, setEvents] = useState([])
     useEffect(() => {
       async function fetchEvents() {
@@ -20,10 +23,10 @@ function Events() {
         }
       catch(error) {
         console.log(error)
+        handleNavigation("/error")
       }}
     fetchEvents()
     }, [])
-
 
     return ( 
     <article className='center'>
@@ -31,9 +34,7 @@ function Events() {
         <h2>Events</h2>
       </header>  
         <EventCardsContainer events={events} />
-     
-        <PrimaryButton action={handleNavigation} title="Gå till varukorg" />
-      
+        <PrimaryButton action={() => handleNavigation("/order")} title="Gå till varukorg" />      
     </article>
    );
 }
