@@ -12,7 +12,7 @@ function Order() {
   }
 
   //get events from cart in localstorage and set count
-  const events = JSON.parse(localStorage.getItem("cart"))
+  const events = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
   const [count, setCount] = useState(events.map(event => event.count))
   const [cart, setCart] = useState(events)
   useEffect(() => {
