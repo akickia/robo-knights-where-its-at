@@ -2,7 +2,7 @@ import React from 'react'
 import code from '../images/A2ED7.png'
 
 export default function TicketCard({event}) {
-  const {name, price, when:{date, from, to}, where} = event
+  const {name, when:{date, from, to}, where} = event
 
   return (
     <section className='ticket'>
@@ -37,7 +37,6 @@ export default function TicketCard({event}) {
         <img src={code}></img>
         <p>#A2ED7</p>  
       </section>
-
     </section>
   )
 }

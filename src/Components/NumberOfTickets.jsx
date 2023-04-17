@@ -1,5 +1,4 @@
 import React from 'react'
-import trash from "../images/trash.svg"
 
 export default function NumberOfTickets({count, eventName, eventTime, totalPrice, decreaseCount, increaseCount}) {
 

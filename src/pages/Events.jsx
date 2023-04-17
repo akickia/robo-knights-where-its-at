@@ -1,7 +1,7 @@
 import { useEffect, useState, React } from 'react'
 import EventCardsContainer from '../Components/EventCardsContainer';
 import PrimaryButton from '../Components/PrimaryButton';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import "../styles/events.css"
 
 function Events() {

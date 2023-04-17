@@ -72,6 +72,7 @@ h6 {
   letter-spacing: 1.3px;
 }
 
+
 button {
   font-size: 1.5rem;
   font-family: 'Fira Sans';
@@ -90,18 +91,26 @@ button:hover {
   background-color: var(--white-font);
   color: var(--turquoise-font-button);
   transition: ease-in-out 0.5s;
-
-
-.center {
-display: flex;
-height: 100%;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-position: relative;
 }
 
-.center img {
+.center {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.center-start {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-start img {
   width: 50%
 }
 
@@ -115,23 +124,20 @@ position: relative;
   cursor: pointer;
 }
 
-.btn-section {
-  position: absolute;
-  bottom: 1rem
-}
 
 
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    
-  }
-  a:hover {
-    color: #747bff;
-  } */
-/*   
-  button {
-    background-color: #f9f9f9;
-  } */
+
+
+
+
+
+
+
+
+
+
+
+
+
 

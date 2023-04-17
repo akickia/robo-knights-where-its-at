@@ -3,12 +3,12 @@ import { useNavigate } from 'react-router-dom'
 
 export default function EventCard({eventDetails}) {
   const {name, price, when:{date, from, to}, where} = eventDetails
-  // console.log(eventDetails)
   const navigate = useNavigate()
+
+  //set localstorage to clicked event and navigate to event-page
   function handleLocalStorage (eventDetails) {
     localStorage.setItem("event", JSON.stringify(""))
     localStorage.setItem("event", JSON.stringify(eventDetails))
-    console.log(eventDetails)
     navigate("/event")
 }
   
