@@ -1,17 +1,10 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem 2rem 2rem;
   text-align: center;
 }
 
-.search-frame {
-  background-color: aqua;
-  width: 19rem;
-  height: 2.5rem;
-}
-
-.logo {
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -45,4 +38,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
