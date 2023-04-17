@@ -2,6 +2,7 @@ import { useEffect, useState, React } from 'react'
 import EventCardsContainer from '../Components/EventCardsContainer';
 import PrimaryButton from '../Components/PrimaryButton';
 import { Link, useNavigate } from 'react-router-dom';
+import "../styles/events.css"
 
 function Events() {
   const navigate = useNavigate()
@@ -25,12 +26,14 @@ function Events() {
 
 
     return ( 
-    <article>
+    <article className='center'>
       <header>
         <h2>Events</h2>
       </header>  
         <EventCardsContainer events={events} />
-      <PrimaryButton action={handleNavigation} title="Gå till varukorg" />
+     
+        <PrimaryButton action={handleNavigation} title="Gå till varukorg" />
+      
     </article>
    );
 }

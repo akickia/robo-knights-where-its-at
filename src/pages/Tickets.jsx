@@ -21,7 +21,7 @@ export default function Tickets() {
   })
   return (
     <article className="tickets-container">
-      <h5 onClick={handleNavigationGoBack}>Tillbaka</h5>
+      <h5 onClick={handleNavigationGoBack} className='closeBtn'>Tillbaka</h5>
       <h1>Dina biljetter</h1>
       {eventElements}
       </article>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NumberOfTickets from "../Components/NumberOfTickets";
 import PrimaryButton from "../Components/PrimaryButton";
-
+import "../styles/order.css"
 
 function Order() {
   const navigate = useNavigate()
@@ -59,12 +59,14 @@ const reducedPrice = totalPrice.reduce((acc, current) => {
   
   
   return ( 
-    <article>
-      <h5 onClick={handleNavigationGoBack}>Tillbaka</h5>
+    <article className="cart center">
+      <h5 onClick={handleNavigationGoBack} className="closeBtn">Tillbaka</h5>
       <h1>Varukorg</h1>
       {eventElements}
-      <p>Totalt värde på order</p>
-      <h4>{reducedPrice} sek</h4>
+      <section className="total">
+        <p>Totalt värde på order</p>
+        <h4>{reducedPrice} sek</h4>
+        </section>
       <PrimaryButton title={"Skicka order"} action={() => {handleNavigation()}} />
     </article>
    );

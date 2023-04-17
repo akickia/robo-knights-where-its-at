@@ -16,15 +16,15 @@
   border-style: none;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0 auto;
   display: flex;
-  place-items: center;
   width: 23.5rem;
   min-height: 42rem;
-  background-color: var(--background-color);
+  background-color: var(--white-font);
   color: var(--white-font);
 }
 
@@ -43,6 +43,7 @@ h1, h2 {
 
 h1 {
   font-size: 2rem;
+  line-height: 2.7rem;
 }
 
 h2 {
@@ -53,6 +54,7 @@ h2 {
 
 h3 {
   color: var(--turquoise-font-button);
+  line-height: 1.7rem;
 }
 
 h4 {
@@ -92,110 +94,32 @@ button:hover {
   transition: ease-in-out 0.5s;
 }
 
-/* events start */
-
-input {
-  background-color: var(--input-color);
-  width: 19rem;
-  height: 2.5rem;
-  background-image: url(./images/search.png);
-  background-repeat: no-repeat;
-  background-position: 0.5rem center;
-  margin-bottom: 1rem;
-  border-radius: 4px;
+.center {
+display: flex;
+height: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
 }
 
-.event-cards-container {
-  margin-bottom: 2rem;
+.center img {
+  width: 50%
 }
 
-.event-card-wrapper {
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin: 1rem 2rem 0 2rem;
-}
-
-.date-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border: solid 1px var(--white-font);
-  width: 1.375rem;
-  height: 1.375rem;
-  padding: 1.2rem 1.7rem 2.2rem 1.7rem;
-  border-radius: 3px;
-  text-transform: uppercase;
-  margin-right: 1rem;
-}
-
-.event-box {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  align-items: flex-start;
-  border-bottom: 1px solid var(--lt-grey-font);
-  width: 100%;
-  padding-bottom: 0.5rem;
-}
-
-.price-box {
+.closeBtn {
   position: absolute;
-  bottom: 8px;
-  right: 0;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 1rem;
+  color: var(--white-font);
+  font-size: .75rem;
 }
 
-/* events end*/
-
-/* event start */
-
-.event-price {
-  display: grid;
-  grid-template-areas:
-  "a a a"
-  "b c d";
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  width: 14.375rem;
-  height: 8.125rem;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-  grid-gap: 1px;
-  background-color: var(--white-font);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.btn-section {
+  position: absolute;
+  bottom: 1rem
 }
-
-.total-price, .decrease-ticket, .increase-ticket, .ticket-count {
-  background-color: var(--background-color);
-}
-
-.total-price {
-  grid-area: a;
-  border-bottom: none;
-}
-
-.decrease-ticket {
-  grid-area: b;
-}
-
-.ticket-count {
-  grid-area: c;
-}
-
-.increase-ticket {
-  grid-area: d;
-}
-
-
-
-
-
-/* event end*/
-
-
 
 
 
@@ -224,17 +148,17 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
-
+/* 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    
   }
   a:hover {
     color: #747bff;
-  }
+  } */
 /*   
   button {
     background-color: #f9f9f9;
   } */
-}
+

@@ -4,6 +4,7 @@ import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../App";
 import Confirmation from "../Components/Confirmation";
+import "../styles/events.css"
 
 function Event() {
   //Using context hook
@@ -78,15 +79,16 @@ function Event() {
  
 
   return ( 
-    <article>
-      <h3 onClick={handleNavigation}>X</h3>
+    <article className="center event">
+      <h3 onClick={handleNavigation} className="closeBtn">Tillbaka</h3>
           <h1>{name}</h1>
           <h3>{date} kl. {from} - {to}</h3>
-          <p>@ {where}</p>
+          <p className="event-where">@ {where}</p>
           <NumberOfTickets count={count} totalPrice={totalPrice} decreaseCount={decreaseCount} increaseCount={increaseCount} />
-          <PrimaryButton action={handleAddToCart} title="Lägg i varukorg" />
-          <br /> <br />
-          <PrimaryButton action={handleNavigationToCart} title="Gå till varukorg" />
+          <section className="btn-section">
+            <PrimaryButton action={handleAddToCart} title="Lägg i varukorg" />
+            <PrimaryButton action={handleNavigationToCart} title="Gå till varukorg" />
+            </section>
           {addedToCart && <Confirmation />}
     </article>
    );
