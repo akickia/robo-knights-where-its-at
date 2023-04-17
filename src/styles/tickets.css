@@ -1,15 +1,14 @@
 .tickets-container {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
   background: linear-gradient(var(--background-color), var(--pink-font-shadow-border));
   max-height: 1000px;
   justify-content: flex-start;
   overflow-y: scroll; 
   padding-top: 2rem;
-
 }
 
 .tickets-container::-webkit-scrollbar {
@@ -43,6 +42,7 @@
   background-color: rgba(0, 0, 0, 0.09);
   width: 100%;
 }
+
 .ticket h1 {
   font-family: 'Sansita';
   font-size: 1.625rem;
@@ -79,6 +79,7 @@
   border-top: 1px dotted gray;
   border-bottom: 1px dotted gray;;
 }
+
 .ticket .ticket-when section:not(:last-of-type) {
   border-right: 1px dotted gray;
 }
@@ -104,6 +105,7 @@
   background-color: rgba(0, 0, 0, 0.12);
   padding: 1.75rem 0;
 }
+
 .ticket .img-container p {
   padding-top: .5rem
 }

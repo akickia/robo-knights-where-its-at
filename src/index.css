@@ -3,7 +3,6 @@
 
 :root {
   font-family: 'Fira Sans';
-
   --background-color: #231F42;
   --input-color: #38335c;
   --lt-grey-font: #D0D0D0;
@@ -71,7 +70,6 @@ h6 {
   color: var(--white-font);
   text-shadow: 1px 1px 0px #F56B9A;
   letter-spacing: 1.3px;
-  
 }
 
 button {

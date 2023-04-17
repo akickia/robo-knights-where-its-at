@@ -11,8 +11,6 @@ input {
   color: var(--white-font)
 }
 
-
-
 .event-cards-container {
   margin-bottom: 2rem;
 }
@@ -40,7 +38,6 @@ input {
   margin-right: 1rem;
 }
 
-
 .event-box {
   display: flex;
   flex-direction: column;
@@ -61,6 +58,7 @@ input {
   font-size: 1rem;
   line-height: 1.3rem;
 }
+
 .event-price {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -68,7 +66,6 @@ input {
   "a a a"
   "b c d"; 
   grid-template-rows: auto;
-  
   max-width: 14.375rem;
   width: 100%;
   margin: 0 auto;
@@ -80,9 +77,7 @@ input {
 }
 
 .event .event-price {
-
   margin-bottom: 6rem;
-
 }
 
 .event-price > * {
@@ -130,10 +125,6 @@ input {
   grid-area: d;
   cursor: pointer;
 }
-
-
-
-
 
 .confirmation {
   padding-bottom: 3rem;

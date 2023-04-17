@@ -9,10 +9,10 @@
 .cart .event-price {
   max-width: 19.375rem
 }
+
 .cart .total-price {
   text-align: left;
   padding: 0 0.5rem;
-
 }
 
 .cart .cart-title {
@@ -28,6 +28,7 @@
 .cart .total-price h1 {
   font-size: 1.5rem;
 }
+
 .cart .total-price p {
   line-height: 1rem;
   font-size: .875rem;
