@@ -1,0 +1,111 @@
+.tickets-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(var(--background-color), var(--pink-font-shadow-border));
+  max-height: 1000px;
+  justify-content: flex-start;
+  overflow-y: scroll; 
+  padding-top: 2rem;
+}
+
+.tickets-container::-webkit-scrollbar {
+  display: none;
+}
+
+.ticket {
+  background-color: var(--white-font);
+  margin: 1rem;
+  max-width: 19.375rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  border-radius: 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.ticket .ticket-section {
+  padding: 1.25rem 1rem
+}
+
+.ticket .ticket-section:nth-of-type(2) {
+  background-color: rgba(0, 0, 0, 0.03);
+  width: 100%;
+  border-top: 1px dotted gray;
+}
+
+.ticket .ticket-section:nth-of-type(4) {
+  background-color: rgba(0, 0, 0, 0.09);
+  width: 100%;
+}
+
+.ticket h1 {
+  font-family: 'Sansita';
+  font-size: 1.625rem;
+  line-height: 1.875rem;
+  color: var(--pink-font-shadow-border);
+}
+
+.ticket h4 {
+  font-family: 'Fira Sans';
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.ticket .ticket-when {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  text-align: start;
+}
+
+.ticket .text {
+  font-size: .75rem;
+  line-height: 1rem;
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.ticket .ticket-when section{
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color: rgba(0, 0, 0, 0.06);
+  border-top: 1px dotted gray;
+  border-bottom: 1px dotted gray;;
+}
+
+.ticket .ticket-when section:not(:last-of-type) {
+  border-right: 1px dotted gray;
+}
+
+.ticket p {
+  text-transform: uppercase;
+  line-height: .75rem;
+  font-size: .625rem;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.ticket .ticket-when h4 {
+  padding: .5rem 0
+}
+
+.ticket .img-container {
+  align-self: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  background-color: rgba(0, 0, 0, 0.12);
+  padding: 1.75rem 0;
+}
+
+.ticket .img-container p {
+  padding-top: .5rem
+}

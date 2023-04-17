@@ -3,7 +3,6 @@
 
 :root {
   font-family: 'Fira Sans';
-
   --background-color: #231F42;
   --input-color: #38335c;
   --lt-grey-font: #D0D0D0;
@@ -16,19 +15,16 @@
   border-style: none;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0 auto;
   display: flex;
-  place-items: center;
   width: 23.5rem;
   min-height: 42rem;
-  background-color: var(--background-color);
+  background-color: var(--white-font);
   color: var(--white-font);
-}
-
-header {
 }
 
 p {
@@ -46,6 +42,7 @@ h1, h2 {
 
 h1 {
   font-size: 2rem;
+  line-height: 2.7rem;
 }
 
 h2 {
@@ -56,6 +53,7 @@ h2 {
 
 h3 {
   color: var(--turquoise-font-button);
+  line-height: 1.7rem;
 }
 
 h4 {
@@ -72,7 +70,6 @@ h6 {
   color: var(--white-font);
   text-shadow: 1px 1px 0px #F56B9A;
   letter-spacing: 1.3px;
-  
 }
 
 button {
@@ -86,72 +83,55 @@ button {
   color: var(--white-font);
   border-radius: 3px;
   cursor: pointer;
+  margin-bottom: 2rem;
 }
 
 button:hover {
   background-color: var(--white-font);
   color: var(--turquoise-font-button);
   transition: ease-in-out 0.5s;
+
+
+.center {
+display: flex;
+height: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
 }
 
-input {
-  background-color: var(--input-color);
-  width: 19rem;
-  height: 2.5rem;
-  background-image: url(./images/search.png);
-  background-repeat: no-repeat;
-  background-position: 0.5rem center;
-  margin-bottom: 1rem;
-  border-radius: 4px;
+.center img {
+  width: 50%
 }
 
-.event-card-wrapper {
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin: 1rem 0;
-}
-
-.date-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: solid 1px var(--white-font);
-  width: 1.375rem;
-  height: 1.375rem;
-  padding: 1.2rem 1.7rem 2.2rem 1.7rem;
-  border-radius: 3px;
-  text-transform: uppercase;
-  margin-right: 1rem;
-}
-
-.event-box {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  align-items: flex-start;
-  border-bottom: 1px solid var(--lt-grey-font);
-  width: 100%;
-  padding-bottom: 0.5rem;
-}
-
-.price-box {
+.closeBtn {
   position: absolute;
-  bottom: 8px;
-  right: 0;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 1rem;
+  color: var(--white-font);
+  font-size: .75rem;
+  cursor: pointer;
 }
+
+.btn-section {
+  position: absolute;
+  bottom: 1rem
+}
+
 
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    
   }
   a:hover {
     color: #747bff;
-  }
+  } */
 /*   
   button {
     background-color: #f9f9f9;
   } */
-}
+

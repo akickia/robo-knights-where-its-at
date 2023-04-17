@@ -1,6 +1,6 @@
 function Error() {
   return ( 
-    <section>
+    <section className="center">
       <h1>Något gick fel!</h1>
     </section>
    );

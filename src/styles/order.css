@@ -1,0 +1,50 @@
+.cart {
+  padding-top: 2rem;
+}
+
+.cart .closeBtn {
+  align-self: flex-start;
+}
+
+.cart .event-price {
+  max-width: 19.375rem
+}
+
+.cart .total-price {
+  text-align: left;
+  padding: 0 0.5rem;
+}
+
+.cart .cart-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart .cart-title img {
+  width: 25px;
+  stroke: white;
+}
+
+.cart .total-price h1 {
+  font-size: 1.5rem;
+}
+
+.cart .total-price p {
+  line-height: 1rem;
+  font-size: .875rem;
+  color: var(--turquoise-font-button)
+}
+
+.cart .total {
+  margin: 2rem
+}
+
+.cart .total h4 {
+  font-size: 2rem;
+  color: var(--white-font);
+  text-shadow: 1px 1px 0px var(--pink-font-shadow-border)
+}
+
+.cart button {
+  margin-bottom: 3rem;
+}

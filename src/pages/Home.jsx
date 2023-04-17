@@ -12,8 +12,8 @@ function Home() {
   }, [])
 
   return ( 
-    <article>
-    <img src={logo} style={{width:"80%"}}/>
+    <article className="center">
+    <img src={logo}/>
     <h1>Where It's @</h1>
     <h4>Ticketing made easy</h4>
     </article>

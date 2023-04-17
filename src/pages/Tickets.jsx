@@ -2,6 +2,7 @@ import React from 'react'
 import TicketCard from '../Components/TicketCard'
 import {nanoid} from 'nanoid'
 import { useNavigate } from 'react-router-dom'
+import "../styles/tickets.css"
 
 export default function Tickets() {
   const navigate = useNavigate()
@@ -19,8 +20,8 @@ export default function Tickets() {
     })
   })
   return (
-    <article>
-      <h5 onClick={handleNavigationGoBack}>Tillbaka</h5>
+    <article className="tickets-container">
+      <h5 onClick={handleNavigationGoBack} className='closeBtn'>Tillbaka</h5>
       <h1>Dina biljetter</h1>
       {eventElements}
       </article>
